@@ -33,3 +33,17 @@ update CustomerTable set Pincode=440321 where Customer_Name='Prajakta'
 -- Show number of customers in each country 
 select Count(*) as NoOfCustomers,Country from CustomerTable group by Country
 
+--Show Max salary from table
+select Max(Salary) as MaximumSalary from CustomerTable
+--or with showing all columns
+select * from CustomerTable where Salary=(select Max(salary) as MaximumSalary from CustomerTable )
+
+--Show Min salary
+select Min(Salary) as Minimumsalary from CustomerTable
+select * from CustomerTable where Salary=(select Min(Salary) as Minimumsalary from CustomerTable)
+
+-- show Total salary
+select Sum(Salary) as TotalSalary from CustomerTable
+
+-- Show Avg salary
+select Avg(Salary) as AverageSalary from CustomerTable
