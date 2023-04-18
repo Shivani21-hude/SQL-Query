@@ -28,5 +28,5 @@ update CustomerTable set Country='India' where Customer_ID in (2,3,4)
 update CustomerTable set Salary=50000 where Customer_ID in (1,3)
 update CustomerTable set Salary=30000 where Customer_ID in(2,4)
 update CustomerTable set Pincode=892341 where Customer_Name='Rohit'
-
+update CustomerTable set Pincode=440321 where Customer_Name='Prajakta'
 
