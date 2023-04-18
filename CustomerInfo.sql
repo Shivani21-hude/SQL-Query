@@ -64,4 +64,10 @@ insert into Orders values
 ('Jeans',1,1500)
 
 select * from Orders
+select * from CustomerTable
 
+-- fetch the details from both the tables using joins
+
+select Orders.OrderId,Orders.ProductName,CustomerTable.Customer_Name,CustomerTable.Address
+from CustomerTable
+Inner Join Orders On Orders.OrderId=CustomerTable.Customer_ID
