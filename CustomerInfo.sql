@@ -30,3 +30,6 @@ update CustomerTable set Salary=30000 where Customer_ID in(2,4)
 update CustomerTable set Pincode=892341 where Customer_Name='Rohit'
 update CustomerTable set Pincode=440321 where Customer_Name='Prajakta'
 
+-- Show number of customers in each country 
+select Count(*) as NoOfCustomers,Country from CustomerTable group by Country
+
