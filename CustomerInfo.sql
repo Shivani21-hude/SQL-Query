@@ -47,3 +47,21 @@ select Sum(Salary) as TotalSalary from CustomerTable
 
 -- Show Avg salary
 select Avg(Salary) as AverageSalary from CustomerTable
+
+-- create Order table 
+
+create table Orders(
+OrderId int identity(1,1) primary key,
+ProductName varchar(50),
+Quantity int,
+Rate float
+Foreign key (OrderId) references CustomerTable(Customer_ID)
+)
+
+insert into Orders values
+('T-Shirts',5,2000),
+('Kurties',2,1000),
+('Jeans',1,1500)
+
+select * from Orders
+
